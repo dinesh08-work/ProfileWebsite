@@ -1,0 +1,175 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dinesh Jangra — Websites & Backend Systems for Businesses</title>
+  <meta name="description" content="I build fast, professional websites and reliable backends for clinics, shops and startups.">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+  :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#ffffff;--surface:#f6f8fb;--border:#e5e9f0;--text:#0f172a;--muted:#475569;--accent:#0284c7;--accent-ink:#fff;--soft:#e0f2fe;--shadow:0 6px 24px -12px rgba(15,23,42,.15)}
+  :root[data-theme="night"]{--bg:#16120f;--surface:#211b16;--border:#382f27;--text:#f4eadc;--muted:#bfae98;--accent:#7dd3fc;--accent-ink:#082f49;--soft:#1e2c38;--shadow:none}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+  *,*:before,*:after{box-sizing:inherit}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:800}.logo b{color:var(--accent)}
+  nav{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--muted)}
+  nav a:hover{color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:600;font-size:15px;border:1px solid var(--border);background:var(--surface);cursor:pointer;font-family:inherit;color:var(--text)}
+  .btn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .btn:hover{transform:translateY(-1px)}
+  section{padding:72px 0}
+  .kick{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.08;margin:14px 0;letter-spacing:-.02em;font-weight:800}
+  h2{font-size:clamp(1.6rem,4vw,2.3rem);margin:8px 0 12px;letter-spacing:-.01em}
+  p.lead{color:var(--muted);font-size:1.1rem;max-width:620px}
+  .hl{color:var(--accent)}
+  .badge{display:inline-flex;gap:8px;align-items:center;background:var(--soft);color:var(--accent);padding:6px 14px;border-radius:99px;font-size:13px;font-weight:600}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+  body,header,.card,.btn,input,textarea,details{transition:background .3s,color .3s,border-color .3s}
+  h1,h2{font-weight:800}
+  #tg{padding:8px 12px;font-size:16px}
+  .card h3{margin:10px 0 6px;font-size:1.1rem}.card p{margin:0;color:var(--muted);font-size:.95rem}
+  .ico{width:42px;height:42px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:20px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:36px}
+  .stats div{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px}
+  .stats b{font-size:1.6rem;display:block}.stats span{color:var(--muted);font-size:.85rem}
+  .work{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center}
+  @media(max-width:780px){.work{grid-template-columns:1fr}nav a.h{display:none}}
+  .browser{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface);box-shadow:0 20px 50px -20px rgba(0,0,0,.35)}
+  .bar{display:flex;gap:6px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted)}
+  .bar i{width:10px;height:10px;border-radius:50%;background:var(--border)}
+  .bar span{margin-left:10px;background:var(--bg);padding:3px 12px;border-radius:99px;flex:1}
+  .shot{padding:28px 22px;background:linear-gradient(135deg,var(--soft),var(--surface));min-height:220px}
+  .shot h4{margin:0 0 8px;font-size:1.3rem}.shot p{margin:0 0 14px;color:var(--muted);font-size:.9rem}
+  .shot .row{display:flex;gap:8px;flex-wrap:wrap}.shot .row em{font-style:normal;font-size:12px;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:99px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tags span{font-size:12px;background:var(--soft);color:var(--accent);padding:4px 10px;border-radius:8px;font-weight:600}
+  .steps{counter-reset:s}.steps .card:before{counter-increment:s;content:"0" counter(s);color:var(--accent);font-weight:800}
+  details{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+  summary{cursor:pointer;font-weight:600}details p{color:var(--muted);margin:10px 0 0}
+  input,textarea{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-family:inherit;font-size:15px;margin-bottom:12px}
+  input:focus,textarea:focus{outline:2px solid var(--accent);border-color:transparent}
+  footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  #ok{display:none;color:var(--accent);font-weight:600;margin-top:10px}
+  </style>
+  </head>
+  <body>
+  <header><div class="wrap"><a href="#top" class="logo">Dinesh<b>.dev</b></a>
+  <nav><a class="h" href="#services">Services</a><a class="h" href="#work">My Work</a><a class="h" href="#process">Process</a><a class="h" href="#faq">FAQ</a><button id="tg" class="btn" aria-label="Toggle night light" title="Night light">🌙</button><a class="btn pri" style="padding:8px 16px" href="#contact">Get a quote</a></nav></div></header>
+
+  <main id="top">
+  <section style="padding-top:64px"><div class="wrap">
+  <span class="badge"><i class="dot"></i> Taking new projects</span>
+  <h1>Websites that bring you <span class="hl">more customers</span> — built on a rock-solid backend.</h1>
+  <p class="lead">I'm Dinesh, a Backend Engineer who designs and builds fast, mobile-friendly websites and reliable systems for clinics, local businesses and startups. Clear pricing, honest timelines, and support after launch.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px"><a class="btn pri" href="#contact">Start your project →</a><a class="btn" href="#work">See live work</a></div>
+  <div class="stats"><div><b>Live</b><span>client site delivered</span></div><div><b>300+</b><span>DSA problems solved</span></div><div><b>B.Tech CSE</b><span>Computer Science graduate</span></div><div><b>Java · Python</b><span>Spring Boot · FastAPI</span></div></div>
+  </div></section>
+
+  <section id="services"><div class="wrap">
+  <p class="kick">What I do</p><h2>Everything your business needs online</h2><p class="lead">From a simple business website to a full system with logins, bookings and a database.</p>
+  <div class="grid g3" style="margin-top:28px">
+  <div class="card"><div class="ico">🌐</div><h3>Business Websites</h3><p>Professional, mobile-first sites that load fast and show up on Google.</p></div>
+  <div class="card"><div class="ico">📅</div><h3>Booking & Enquiry Forms</h3><p>Let customers book appointments or contact you 24/7 with WhatsApp and email alerts.</p></div>
+  <div class="card"><div class="ico">⚙️</div><h3>Custom Backend & APIs</h3><p>Secure Spring Boot / FastAPI services with MySQL for dashboards, admin panels and apps.</p></div>
+  <div class="card"><div class="ico">🔧</div><h3>Fixes & Upgrades</h3><p>Slow, broken or outdated site? I'll modernise it without starting from zero.</p></div>
+  <div class="card"><div class="ico">🛡️</div><h3>Maintenance & Support</h3><p>Updates, backups and quick fixes so you never worry after launch.</p></div>
+  <div class="card"><div class="ico">🚀</div><h3>Deployment & Domain</h3><p>Domain, hosting and go-live handled end to end — you just approve.</p></div>
+  </div></div></section>
+
+  <section id="work" style="background:var(--surface);border-block:1px solid var(--border)"><div class="wrap">
+  <p class="kick">Featured work</p><h2>A real website, live on the internet</h2>
+  <div class="work" style="margin-top:28px">
+  <div class="browser"><div class="bar"><i></i><i></i><i></i><span>gokulvetcare.in</span></div>
+  <div class="shot"><h4>🐾 Gokul Vet Care</h4><p>Trusted care for your pets — services, clinic details and easy contact, all in one place.</p><div class="row"><em>Services</em><em>About</em><em>Contact</em><em>Mobile-ready</em></div></div></div>
+  <div><span class="badge">Client project · Live</span><h2 style="margin-top:14px">Gokul Vet Care</h2>
+  <p style="color:var(--muted)">A professional website for a veterinary care business, designed so pet owners can quickly find the services offered, trust the clinic and get in touch — from any phone.</p>
+  <div class="tags"><span>Responsive design</span><span>Fast loading</span><span>Easy contact</span></div>
+  <a class="btn pri" href="https://gokulvetcare.in" target="_blank" rel="noopener">Visit live website ↗</a></div>
+  </div></div></section>
+
+  <section><div class="wrap">
+  <p class="kick">Also built</p><h2>Backend & full-stack projects</h2>
+  <div class="grid g2" style="margin-top:24px">
+  <div class="card"><h3>Scalable REST API Platform</h3><p>JWT auth, role-based access, pagination, validation and global error handling.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>MySQL</span></div></div>
+  <div class="card"><h3>High-Performance FastAPI Service</h3><p>Async microservice with typed schemas, auto docs and background tasks.</p><div class="tags"><span>Python</span><span>FastAPI</span><span>MySQL</span></div></div>
+  <div class="card"><h3>Full-Stack Web Application</h3><p>React + Tailwind front end connected to a Spring Boot API with a responsive UI.</p><div class="tags"><span>React</span><span>Tailwind</span><span>Spring Boot</span></div></div>
+  <div class="card"><h3>More on GitHub</h3><p>Browse source code, commits and open-source contributions.</p><div style="margin-top:14px"><a class="btn" href="https://github.com/Dinesh02121" target="_blank" rel="noopener">View GitHub ↗</a></div></div>
+  </div></div></section>
+
+  <section id="process" style="padding-top:20px"><div class="wrap">
+  <p class="kick">How it works</p><h2>Simple, transparent process</h2>
+  <div class="grid g3 steps" style="margin-top:24px">
+  <div class="card"><h3>Discuss</h3><p>Tell me about your business and goals. Free consultation, no pressure.</p></div>
+  <div class="card"><h3>Plan & quote</h3><p>You get a clear scope, timeline and fixed price before we begin.</p></div>
+  <div class="card"><h3>Build & review</h3><p>I share progress regularly and refine until you're happy.</p></div>
+  <div class="card"><h3>Launch & support</h3><p>Go live on your domain, with ongoing help whenever you need it.</p></div>
+  </div></div></section>
+
+  <section style="background:var(--surface);border-block:1px solid var(--border)"><div class="wrap">
+  <p class="kick">Why work with me</p><h2>Built to last, easy to work with</h2>
+  <div class="grid g3" style="margin-top:24px">
+  <div class="card"><h3>✔ Engineer-grade quality</h3><p>Clean, secure code and proper database design — not just a pretty template.</p></div>
+  <div class="card"><h3>✔ Clear communication</h3><p>Plain language, no jargon, and quick replies.</p></div>
+  <div class="card"><h3>✔ Mobile-first & fast</h3><p>Most customers browse on phones, so every site is built for them first.</p></div>
+  </div></div></section>
+
+  <section id="faq"><div class="wrap" style="max-width:760px">
+  <p class="kick">FAQ</p><h2>Common questions</h2>
+  <details open><summary>How long does a website take?</summary><p>A typical business website takes 1–3 weeks depending on pages and features. I'll confirm the timeline in your quote.</p></details>
+  <details><summary>Do I need to provide content?</summary><p>Share what you have — logo, photos, service list. I can help organise and polish the rest.</p></details>
+  <details><summary>Will you help with domain and hosting?</summary><p>Yes. I can set up the domain, hosting and go-live so you don't have to handle the technical side.</p></details>
+  <details><summary>Do you offer support after launch?</summary><p>Yes — small fixes and updates are available, with optional monthly maintenance.</p></details>
+  </div></section>
+
+  <section id="contact" style="background:var(--surface);border-top:1px solid var(--border)"><div class="wrap grid g2" style="align-items:start">
+  <div><p class="kick">Contact</p><h2>Let's build your website</h2><p class="lead">Tell me what you need and I'll reply with ideas and a quote — usually within a day.</p>
+  <p style="margin-top:20px"><a class="hl" href="mailto:dineshjangra0212@gmail.com">✉ dineshjangra0212@gmail.com</a></p>
+  <p><a href="https://linkedin.com/in/dinesh0212" target="_blank" rel="noopener">LinkedIn ↗</a> · <a href="https://github.com/Dinesh02121" target="_blank" rel="noopener">GitHub ↗</a> · <a href="https://drive.google.com/file/d/1KX_rQdENrVrF7uScL5sphq4ZcLQSJYgl/view?usp=sharing" target="_blank" rel="noopener">Resume ↗</a></p></div>
+  <form id="f" class="card" novalidate>
+  <input id="n" placeholder="Your name" required><input id="e" type="email" placeholder="Email address" required>
+  <textarea id="m" rows="5" placeholder="What kind of website or system do you need?" required></textarea>
+  <button class="btn pri" style="width:100%;justify-content:center" type="submit">Send enquiry</button><div id="ok"></div></form>
+  </div></section>
+  </main>
+
+  <footer><div class="wrap"><span>© 2026 Dinesh Jangra. All rights reserved.</span><span>Backend Engineer · Websites for businesses</span></div></footer>
+
+  <script>
+  (function(){var r=document.documentElement,b=document.getElementById('tg');
+  function set(t){if(t==='night')r.setAttribute('data-theme','night');else r.removeAttribute('data-theme');b.textContent=t==='night'?'☀️':'🌙';b.title=t==='night'?'Back to light':'Night light';}
+  var t='light';try{t=localStorage.getItem('theme')||'light'}catch(e){}
+  set(t);
+  b.addEventListener('click',function(){t=t==='night'?'light':'night';set(t);try{localStorage.setItem('theme',t)}catch(e){}});})();
+  </script>
+  <script>
+  document.getElementById('f').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var n=document.getElementById('n').value.trim(),e=document.getElementById('e').value.trim(),m=document.getElementById('m').value.trim();
+    var ok=document.getElementById('ok');ok.style.display='block';
+    if(!n||!/^\S+@\S+\.\S+$/.test(e)||m.length<10){ok.style.color='#dc2626';ok.textContent='Please enter your name, a valid email and a message (at least 10 characters).';return;}
+    var to='dineshjangra0212@gmail.com',sub='Website enquiry from '+n,body=m+'\n\n— '+n+' ('+e+')';
+    var gm='https://mail.google.com/mail/?view=cm&fs=1&to='+to+'&su='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+    var mt='mailto:'+to+'?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+    ok.style.color='var(--accent)';
+    ok.innerHTML='Your message is ready. Choose how to send it:<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">'+
+    '<a class="btn pri" target="_blank" rel="noopener" href="'+gm+'">Send with Gmail</a>'+
+    '<a class="btn" target="_blank" rel="noopener" href="'+mt+'">Open email app</a>'+
+    '<button type="button" class="btn" id="cp">Copy message</button></div><div id="cm" style="font-weight:500;margin-top:8px"></div>';
+    document.getElementById('cp').onclick=function(){
+      var t='To: '+to+'\nSubject: '+sub+'\n\n'+body,c=document.getElementById('cm');
+      function fb(){var x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();try{document.execCommand('copy');c.textContent='Copied! Paste it into any email.';}catch(_){c.textContent='Please email '+to+' directly.';}x.remove();}
+      if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){c.textContent='Copied! Paste it into any email.';},fb);}else fb();
+    };
+  });
+  </script>
+  </body>
+  </html>
